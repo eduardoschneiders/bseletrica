@@ -1,32 +1,8 @@
 <div class="menu">
 	<div class="border">
 		<div class="span12 application">
-			<ul>
-				<li> <%= link_to "Home", "#" %></li>
-					<li class="breadcrumb-separator"></li>
-				<li> <%= link_to "Sobre a BS", "#" %></li>
-					<li class="breadcrumb-separator"></li>
-				<li> <%= link_to "Obras", "#" %></li>
-					<li class="breadcrumb-separator"></li>
-				<li> <%= link_to "Clientes", "#" %></li>
-					<li class="breadcrumb-separator"></li>
-				<li> <%= link_to "Produtos", "#" %></li>
-					<li class="breadcrumb-separator"></li>
-				<li> <%= link_to "Produtos", "#" %></li>
-					<li class="breadcrumb-separator"></li>
-				<li> <%= link_to "Promoções", "#" %></li>
-					<li class="breadcrumb-separator"></li>
-				<li> <%= link_to "Fornecedores", "#" %></li>
-					<li class="breadcrumb-separator"></li>
-				<li> <%= link_to "Novidades", "#" %></li>
-					<li class="breadcrumb-separator"></li>
-				<li> <%= link_to "Cadastre-se", "#" %></li>
-					<li class="breadcrumb-separator"></li>
-				<li> <%= link_to "Contato", "#" %></li>
-
-				<div style="clear: both;"></div>
-			</ul>
+			<%= render "shared/menu-itens" %>
+			<div style="clear: both"></div>
 		</div>
 	</div>
-	
 </div>
