@@ -3,6 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $blue: #534E8E
+@mixin border-top-bottom
+	border-top: solid 1px #EEEEEE
+	border-bottom: solid 1px #EEEEEE
 
 body 
 	margin: auto
@@ -77,8 +80,7 @@ ul li, h3
 		background: #FFF
 		padding: 5px 0
 	.border
-		border-top: solid 1px #EEEEEE
-		border-bottom: solid 1px #EEEEEE
+		@include border-top-bottom
 	ul li
 		float: left
 		line-height: 12px
@@ -124,9 +126,8 @@ ul li, h3
 		margin-bottom: 30px
 		background: url('logo-footer.png') no-repeat
 	.credits
+		@include border-top-bottom
 		width: 100%
-		border-top: solid 1px #EEEEEE
-		border-bottom: solid 1px #EEEEEE
 		background: #FFF
 		text-align: center
 		padding: 15px
