@@ -1,0 +1,67 @@
+.header
+  .striped
+    height: 140px
+    background: url('strip.png')
+    position: relative
+
+    .shadow
+      height: 80px
+      background: url('striped-shadow.png') no-repeat
+      position: absolute
+      bottom: 0
+
+    .geral
+      padding-top: 20px
+
+      .logo
+        width: 155px
+        height: 100px
+        float: left
+        background: url('logo.png') no-repeat
+
+      .phrase
+        width: 361px
+        height: 12px
+        float: left
+        margin: 45px 0 0 100px
+        background: url('phrase.png') no-repeat
+
+      .contact
+        width: 165px
+        float: right
+        margin-top: 28px
+
+        .phone
+          font-family: "Arial Black"
+          font-size: 20px
+          color: #29176F
+
+        .email
+          color: #999
+
+  .blue-line
+    height: 5px
+    background: $blue
+
+.header 
+  .menu
+    background: #FFF
+    padding: 5px 0
+  .border
+    @include border-top-bottom
+  ul li
+    float: left
+    line-height: 12px
+    padding: 7px 0
+    a
+      font-size: 13px
+      font-family: "Raleway"
+      color: #666
+      font-weight: bold
+  ul li.breadcrumb-separator
+    width: 6px
+    height: 6px
+    float: left
+    background: url('breadcrumb-separator.png') no-repeat
+    margin: 10px 19px 0 18px
+    padding: 0
