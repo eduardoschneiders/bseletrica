@@ -11,6 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20121024163724) do
+
+  create_table "promotions", :force => true do |t|
+    t.string   "title"
+    t.decimal  "price_from",      :precision => 10, :scale => 2
+    t.decimal  "price_to",        :precision => 10, :scale => 2
+    t.date     "expiration_date"
+    t.datetime "created_at",                                     :null => false
+    t.datetime "updated_at",                                     :null => false
+  end
 
 end
