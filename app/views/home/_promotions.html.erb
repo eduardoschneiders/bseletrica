@@ -4,7 +4,22 @@
 <div style="background: #534E8E;">
 	<div class="row">
 		<div class="span12 application">
-			promotions
+			<ul>
+				<% @promotions.each do |promotion|%>
+					<li>
+						<div class="image"><%= image_tag promotion.image%></div>
+						<div class="details">
+							<div class="title"><%= promotion.title %></div>
+							<div class="prices">
+								De <%= number_to_currency(promotion.price_from) %> 
+								por <%= number_to_currency(promotion.price_to) %>
+							</div>
+							<div class="expiration_date">Promoção válida até <%= I18n.l(promotion.expiration_date) %></div>
+						</div>
+						promotions
+					</li>
+				<% end %>
+			</ul>
 		</div>
 	</div>
 </div>
