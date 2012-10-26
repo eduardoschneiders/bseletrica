@@ -1,0 +1,28 @@
+.promotions
+  background: #534E8E
+
+  #slides
+    position: relative
+
+    .slides_container
+      @extend .span12
+      display: none
+
+      li
+        @extend .span12
+        height: 165px
+        display: block
+
+    a.prev
+      background: #CCC
+      position: absolute
+      left: 0
+      top: 0
+      z-index: 1001
+
+    a.next
+      background: #CCC
+      position: absolute
+      right: -100px
+      top: 0
+      z-index: 1001
