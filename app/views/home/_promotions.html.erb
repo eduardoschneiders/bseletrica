@@ -14,26 +14,29 @@
             generatePagination: false,
             preload: true,
             preloadImage: 'img/loading.gif',
-            play: 5000,
-            pause: 5000,
+            play: 7000,
+            slideSpeed: 500,
             hoverPause: true
           });
         });
       </script>
-
+ 
       <div id="slides">
         <ul class="slides_container">
           <% @promotions.each do |promotion|%>
             <li>
-              <div class="image"><%= image_tag promotion.image%></div>
-              <div class="details">
+
+              <div class="image"><div class="back"><%= image_tag promotion.image%></div></div>
+
+              <div class="desc">
                 <div class="title"><%= promotion.title %></div>
-                <div class="prices">
-                  De <%= number_to_currency(promotion.price_from) %> 
-                  por <%= number_to_currency(promotion.price_to) %>
-                </div>
-                <div class="expiration_date">Promoção válida até <%= I18n.l(promotion.expiration_date) %></div>
+                
+                  De <span class="price" style="margin-right: 10px;"><%= number_to_currency(promotion.price_from) %> </span>
+                  por <span class="price"><%= number_to_currency(promotion.price_to) %> </span>
+                
+                <span class="expiration_date">Promoção válida até <%= I18n.l(promotion.expiration_date) %></span>
               </div>
+
             </li>
           <% end %>
         </ul>

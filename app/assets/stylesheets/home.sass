@@ -1,28 +1,61 @@
 .promotions
   background: #534E8E
+  border-bottom: solid 4px $dark_blue
 
   #slides
     position: relative
-
-    .slides_container
-      @extend .span12
-      display: none
-
-      li
-        @extend .span12
-        height: 165px
-        display: block
+    @extend .row
 
     a.prev
-      background: #CCC
       position: absolute
       left: 0
       top: 0
       z-index: 1001
 
     a.next
-      background: #CCC
       position: absolute
       right: -100px
       top: 0
       z-index: 1001
+
+    .slides_container
+      display: none
+
+      li
+        width: 960px
+        height: 165px
+        display: block
+        padding: 30px 0
+
+        .image
+          
+          @extend .span4
+          @extend .offset1
+          float: left
+          
+
+          .back
+            background: #FFF
+            padding: 5px
+            -webkit-border-radius: 5px
+            -moz-border-radius: 5px
+            border-radius: 5px
+
+        .desc
+          @extend .span6
+          @extend .offset1
+          float: left
+          color: #FFF
+          padding: 20px 0
+          font-size: 10px
+
+          .title
+            font-family: "Raleway"
+            font-size: 35px
+            margin-bottom: 86px
+
+          .price
+            font-size: 15px
+
+          .expiration_date
+            margin-left: 25px
