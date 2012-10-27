@@ -7,15 +7,21 @@
     @extend .row
 
     a.prev
+      width: 12px
+      height: 20px
+      background: url('sprites.png') no-repeat 0 -8px
       position: absolute
       left: 0
-      top: 0
+      top: 100px
       z-index: 1001
 
     a.next
+      background: url('sprites.png') no-repeat -12px -8px
+      width: 12px
+      height: 20px
       position: absolute
       right: -100px
-      top: 0
+      top: 100px
       z-index: 1001
 
     .slides_container
