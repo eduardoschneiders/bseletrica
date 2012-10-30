@@ -1,0 +1,22 @@
+<div class="services">
+
+  <div class="row">
+    <div class="span12 application">
+
+        <ul class="slides_container">
+          <% @services.each do |service|%>
+            <li>
+
+              <%= image_tag service.image %>
+              <div class="desc">
+                <%= service.title %>
+              </div>
+
+            </li>
+          <% end %>
+        </ul>
+
+    </div>
+  </div>
+
+</div>
