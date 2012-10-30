@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-  	@promotions = Promotion.limit(5)
+  	@promotions = Promotion.find(:all, :limit => 5, :order => "created_at desc")
   end
 end
