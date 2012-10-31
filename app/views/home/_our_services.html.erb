@@ -1,0 +1,18 @@
+<div class="our_services">
+  
+  <div class="row">
+    <div class="span12 application">
+
+        <div class="title">Nossos Serviços</div>
+        <ul>
+          <% @our_services.each do |our_service|%>
+            <li>
+              <%= our_service.title %>
+            </li>
+          <% end %>
+        </ul>
+
+    </div>
+  </div>
+
+</div>
