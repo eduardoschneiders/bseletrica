@@ -1,4 +1,4 @@
-<div class="our_services">
+<div class="clients">
   
   <div class="row">
     <div class="span12 application">
@@ -7,7 +7,7 @@
         <ul>
           <% @clients.each do |client|%>
             <li>
-              <%= client.image %>
+              <span><%= image_tag client.image, :align => "center" %></span>
             </li>
           <% end %>
         </ul>
