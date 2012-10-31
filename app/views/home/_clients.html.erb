@@ -1,0 +1,18 @@
+<div class="our_services">
+  
+  <div class="row">
+    <div class="span12 application">
+
+        <div class="title">Clientes <span><%= link_to "Veja mais", "#" %></li></span></div>
+        <ul>
+          <% @clients.each do |client|%>
+            <li>
+              <%= client.image %>
+            </li>
+          <% end %>
+        </ul>
+
+    </div>
+  </div>
+
+</div>
