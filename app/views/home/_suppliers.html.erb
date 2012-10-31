@@ -5,9 +5,9 @@
 
         <div class="title">Fornecedores <span><%= link_to "Veja mais", "#" %></li></span></div>
         <ul>
-          <% @clients.each do |client|%>
+          <% @suppliers.each do |supplier|%>
             <li>
-              <span><%= image_tag client.image, :align => "center" %></span>
+              <%= image_tag supplier.image, :align => "center" %>
             </li>
           <% end %>
         </ul>
