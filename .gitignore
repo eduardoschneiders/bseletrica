@@ -13,3 +13,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore upload admin images
+public/system
+
+# Ignore schema
+db/schema.rb
