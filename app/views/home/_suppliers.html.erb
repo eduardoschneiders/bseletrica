@@ -7,7 +7,7 @@
         <ul>
           <% @suppliers.each do |supplier|%>
             <li>
-              <%= image_tag supplier.image, :align => "center" %>
+              <%= image_tag supplier.image.url(:original), :align => "center" %>
             </li>
           <% end %>
         </ul>
