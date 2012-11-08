@@ -7,7 +7,7 @@
         <ul>
           <% @clients.each do |client|%>
             <li>
-              <span><%= image_tag client.image, :align => "center" %></span>
+              <span><%= image_tag client.image.url(:small), :align => "center" %></span>
             </li>
           <% end %>
         </ul>
