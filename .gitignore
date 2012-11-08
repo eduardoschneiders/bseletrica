@@ -16,3 +16,6 @@
 
 # Ignore upload admin images
 public/system
+
+# Ignore schema
+db/schema.rb
