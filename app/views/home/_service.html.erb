@@ -1,10 +1,7 @@
-
-
 <div class="image"><div class="back"><%= image_tag service.image.url(:small) %></div></div>
 
 <div class="desc">
   <div class="title"><%= service.title %></div>
-
-    Local:  <span class="price" style="margin-right: 10px;"><%= service.location %> </span>
-   	Em: <span class="price"><%= I18n.l service.date %> </span>
+  Local:  <span class="price" style="margin-right: 10px;"><%= service.location %> </span>
+  Em: <span class="price"><%= I18n.l service.date %> </span>
 </div>
