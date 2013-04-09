@@ -3,8 +3,10 @@
 <div class="desc">
   <div class="title"><%= promotion.title %></div>
 
-  De <span class="price" style="margin-right: 10px;"><%= number_to_currency(promotion.price_from) %> </span>
-  por <span class="price"><%= number_to_currency(promotion.price_to) %> </span>
+  <div class="detailsDesc">
+    De <span class="price" style="margin-right: 10px;"><%= number_to_currency(promotion.price_from) %> </span>
+    por <span class="price"><%= number_to_currency(promotion.price_to) %> </span>
 
-  <span class="expiration_date">Promoção válida até <%= I18n.l(promotion.expiration_date) %></span>
+    <span class="expiration_date">Promoção válida até <%= I18n.l(promotion.expiration_date) %></span>
+  </div>
 </div>

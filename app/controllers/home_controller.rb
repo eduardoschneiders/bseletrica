@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-  	@promotions_highlights = Promotion.find(:all, :limit => 5, :order => "created_at desc")
+  	@promotions_highlights = Promotion.find(:all, :limit => 4, :order => "created_at desc")
   	@services_highlights = Service.find(:all, :limit => 4, :order => "created_at desc")
   	@highlights = (@promotions_highlights + @services_highlights).sort_by {rand}
   	@services = Service.find(:all, :limit => 4, :order => "created_at desc")
