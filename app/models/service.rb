@@ -1,4 +1,5 @@
 class Service < ActiveRecord::Base
+
   attr_accessible :date, :image, :location, :title
-  has_attached_file :image, :styles => {:small => "200>x125>"}
+  has_attached_file :image, :styles => {:small => "200x180#"}
 end
