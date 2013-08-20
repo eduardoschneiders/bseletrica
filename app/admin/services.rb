@@ -5,6 +5,7 @@ ActiveAdmin.register Service do
       f.input :date
       f.input :location
       f.input :image, :as => :file
+      f.input :image_highlight, :as => :file
     end
     f.buttons
   end
