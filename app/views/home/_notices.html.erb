@@ -1,0 +1,27 @@
+<div class="notices mainLines">
+  
+  <div class="row">
+    <div class="span12 application">
+
+        <div class="title">Novidades <span><%= link_to "Veja mais", "#" %></li></span></div>
+        <ul class="first">
+          <li>
+            <% @notices[0..2].each do |notice|%>
+              <li>
+                <%= notice.title%>
+              </li>
+            <% end %>
+          </li>
+        </ul>
+        <ul>
+          <% @notices[3..6].each do |notice|%>
+            <li>
+              <%= notice.title%>
+            </li>
+          <% end %>
+        </ul>
+
+    </div>
+  </div>
+
+</div>
