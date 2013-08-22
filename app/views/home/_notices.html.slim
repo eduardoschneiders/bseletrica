@@ -1,0 +1,17 @@
+.notices.mainLines
+  .row
+    .span12.application
+      .title
+        | Novidades
+        span
+          = link_to "Veja mais", "#"
+
+      ul.first
+        - @notices[0..2].each do |notice|
+          li
+            = shortTitle notice.title, 65
+
+      ul
+        - @notices[3..6].each do |notice|
+          li
+            = shortTitle notice.title, 65

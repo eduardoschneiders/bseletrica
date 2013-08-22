@@ -10,6 +10,7 @@ gem 'thin'
 
 # Frontend stuff
 gem 'jquery-rails'
+gem 'slim-rails'
 
 # Administrative
 gem 'activeadmin'
