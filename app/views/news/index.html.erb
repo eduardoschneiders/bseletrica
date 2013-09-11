@@ -2,8 +2,9 @@
   <ul>
     <% @notices.each do |notice|%>
       <li>
-        <%= notice.title %>
-        <%= distance_of_time_in_words Time.now, notice.updated_at %> atrás
+      	<% time = distance_of_time_in_words Time.now, notice.updated_at %>
+      	<% title = notice.title + ' -  ' + time %>
+      	<%= link_to title, notice%>
       </li>      
     <% end %>
   </ul>
