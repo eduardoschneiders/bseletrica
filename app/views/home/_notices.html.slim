@@ -5,19 +5,19 @@
         | Novidades
         span
           = link_to "Veja mais", "#"
-
-      ul.first
-        - @notices[0..2].each do |notice|
-          li
-            .circle
-              div
-                | >>
-            = shortTitle notice.title, 60
-
-      ul
-        - @notices[3..6].each do |notice|
-          li
-            .circle
-              div
-                | >>
-            = shortTitle notice.title, 60
+      - if not @notices.empty?
+        ul.first
+          - @notices[0..2].each do |notice|
+            li
+              .circle
+                div
+                  | >>
+              = link_to((shortTitle notice.title, 60), notice)
+      - if not @notices.empty?
+        ul
+          - @notices[3..6].each do |notice|
+            li
+              .circle
+                div
+                  | >>
+              = link_to((shortTitle notice.title, 60), notice)

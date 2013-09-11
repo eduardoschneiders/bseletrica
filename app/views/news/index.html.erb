@@ -1,0 +1,10 @@
+<div class="span12 application">
+  <ul>
+    <% @notices.each do |notice|%>
+      <li>
+        <%= notice.title %>
+        <%= distance_of_time_in_words Time.now, notice.updated_at %> atrás
+      </li>      
+    <% end %>
+  </ul>
+</div>

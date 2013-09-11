@@ -5,6 +5,9 @@ Bseletrica::Application.routes.draw do
 
   resources :home
   resources :about
+  resources :news
+
+  match '/notices/:id', :to => 'news#show', :as => :blabla
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
