@@ -7,8 +7,10 @@ Bseletrica::Application.routes.draw do
   resources :about
   resources :news
   resources :services
+  resources :clients
 
   match 'news', :to => 'news#index', :as => :news
+  match 'clients', :to => 'clients#index', :as => :clients
   match '/news/:id', :to => 'news#show', :as => :notice
   match '/services/:id', :to => 'services#show', :as => :service
   

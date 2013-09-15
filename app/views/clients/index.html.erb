@@ -1,0 +1,10 @@
+<div class="span12 application">
+  <ul>
+    <% @clients.each do |client|%>
+      <li>
+      	<%= client.name%>
+      	<span><%= image_tag client.image.url(:small), :align => "center" %></span>
+      </li>      
+    <% end %>
+  </ul>
+</div>
