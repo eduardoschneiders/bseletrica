@@ -1,0 +1,11 @@
+<div class="span12 application">
+  <ul>
+    <% @services.each do |service|%>
+      <li>
+      	<% time = distance_of_time_in_words Time.now, service.updated_at %>
+      	<% title = service.title + ' -  ' + time %>
+      	<%= link_to title, service%>
+      </li>      
+    <% end %>
+  </ul>
+</div>

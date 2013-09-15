@@ -8,6 +8,8 @@ Bseletrica::Application.routes.draw do
   resources :news
 
   match '/news/:id', :to => 'news#show', :as => :notice
+  match '/services/', :to => 'services#index', :as => :service
+  match '/services/:id', :to => 'services#show', :as => :service
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
