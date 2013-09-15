@@ -4,7 +4,7 @@
       .title
         | Novidades
         span
-          = link_to "Veja mais", "#"
+          = link_to "Veja mais", news_path
       - if not @notices.empty?
         ul.first
           - @notices[0..2].each do |notice|
