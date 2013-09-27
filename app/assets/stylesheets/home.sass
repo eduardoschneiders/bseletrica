@@ -1,5 +1,9 @@
 .mainLines
   margin-top: $space5
+
+.noMarginTop
+  margin-top: 0
+
 #PROMOTIONS
 
 .promotions
@@ -40,11 +44,11 @@
         padding: $space4 0
 
         .image
-          
+
           @extend .span4
           @extend .offset1
           float: left
-          
+
 
           .back
             background: #FFF
@@ -75,7 +79,7 @@
 
 #SERVICES
 .services
-  
+
 
   .gradient
 
@@ -87,7 +91,7 @@
 
   .title
 
-  ul 
+  ul
     li:first-child
       margin-left: 0
 
@@ -101,6 +105,7 @@
       box-shadow:         1px 1px 3px #999
 
 
+
       img
         padding: 10px
 
@@ -108,6 +113,11 @@
         padding: 10px
         background: #F0F0F0
         height: 40px
+
+    li.noMarginTop
+      margin-top: 0
+    li.noMarginLeft
+      margin-left: 0
 
 #OUR_SERVICES
 .our_services
@@ -129,7 +139,7 @@
   .title
     border-bottom: none
     color: #EFEFEF
-    
+
     padding-bottom: 0
 
     span a
@@ -158,11 +168,11 @@
     li
       float: left
       margin-right: 50px
-    
+
     li:last-child
       margin-right: 0
 
-.notices 
+.notices
   ul
     width: 450px
     float: left
@@ -179,8 +189,8 @@
         height: 15px
         float: left
         background: #534E8E
-        
-        
+
+
         margin-right: 10px
         -webkit-border-radius: 100px
         -moz-border-radius: 100px
@@ -193,3 +203,5 @@
   ul.first
     margin-right: 40px
 
+.clear
+  clear: both

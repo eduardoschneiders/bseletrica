@@ -6,13 +6,15 @@
         <div class="title mainLines">Obras <span><%= link_to "Veja mais", services_path %></li></span></div>
         <ul>
           <% @services.each do |service|%>
-            <li>
+            <li class="noMarginTop">
+              <%= link_to service do %>
 
-              <%= image_tag service.image.url(:small) %>
-              <div class="desc">
-                <%= service.title %>
-              </div>
+                <%= image_tag service.image.url(:small) %>
+                <div class="desc">
+                  <%= service.title %>
+                </div>
 
+              <% end %>
             </li>
           <% end %>
         </ul>
