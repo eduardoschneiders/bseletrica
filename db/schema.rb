@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130821173612) do
+ActiveRecord::Schema.define(:version => 20131022160227) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -45,6 +45,16 @@ ActiveRecord::Schema.define(:version => 20130821173612) do
 
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
+
+  create_table "asset_for_services", :force => true do |t|
+    t.integer  "service_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
 
   create_table "clients", :force => true do |t|
     t.string   "name"
@@ -86,16 +96,12 @@ ActiveRecord::Schema.define(:version => 20130821173612) do
     t.string   "title"
     t.date     "date"
     t.string   "location"
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.string   "image_highlight_file_name"
-    t.string   "image_highlight_content_type"
-    t.integer  "image_highlight_file_size"
-    t.datetime "image_highlight_updated_at"
   end
 
   create_table "suppliers", :force => true do |t|

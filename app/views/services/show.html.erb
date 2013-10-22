@@ -5,6 +5,9 @@
     <%= @service.location %>
     <%= distance_of_time_in_words Time.now, @service.updated_at %>
 
-    <div class="image"><div class="back"><%= image_tag @service.image_highlight.url(:medium) %></div></div>
+    <div class="image"><div class="back"><%= image_tag @service.image.url(:medium) %></div></div>
+    <% for asset in @service.asset_for_services %>
+        <%= image_tag(asset.image.url(:thumb))%>
+    <% end %>
   </div>
 </div>
