@@ -7,7 +7,7 @@
 
     <div class="image"><div class="back"><%= image_tag @service.image.url(:medium) %></div></div>
     <% for asset in @service.asset_for_services %>
-        <%= image_tag(asset.image.url(:thumb))%>
+        <%= link_to(image_tag(asset.image.url(:thumb)),asset.image.url(:large)) %>
     <% end %>
   </div>
 </div>
