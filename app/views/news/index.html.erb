@@ -1,11 +1,12 @@
 <div class="span12 application">
+    <%= mainTitle "Notícias" %>
   <ul>
     <% @notices.each do |notice|%>
       <li>
       	<% time = distance_of_time_in_words Time.now, notice.updated_at %>
       	<% title = notice.title + ' -  ' + time %>
       	<%= link_to title, notice%>
-      </li>      
+      </li>
     <% end %>
   </ul>
 </div>
