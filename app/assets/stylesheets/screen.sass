@@ -27,13 +27,17 @@ ul li, h3
 
   span a
     font-family: "browau"
-    font-size: 15px
+    font-size: 16px
     color: $blue
     padding-left: $space1
 
 .mainTitle
-  font-family: "Raleway"
+  @extend .title
   font-size: 40px
   line-height: 47px
-  border-bottom: solid 1px #E9E4E7
   margin: 20px 0
+  color: #888
+
+  span
+    a
+      line-height: 12px

@@ -1,12 +1,18 @@
 <div class="span12 application">
-    <%= mainTitle "Notícias" %>
-  <ul>
-    <% @notices.each do |notice|%>
-      <li>
-      	<% time = distance_of_time_in_words Time.now, notice.updated_at %>
-      	<% title = notice.title + ' -  ' + time %>
-      	<%= link_to title, notice%>
-      </li>
-    <% end %>
-  </ul>
+    <%= mainTitle "Novidades" %>
+    <div class="news">
+      <ul>
+        <% @notices.each do |notice|%>
+          <li>
+          	<%
+              time = distance_of_time_in_words Time.now, notice.updated_at
+              title = "<div class='content'>" + notice.title + "</div> <span class='time'>  " + time + '</span>'
+            %>
+
+            <%= link_to title.html_safe, notice%>
+          </li>
+          <div style="clear: both"></div>
+        <% end %>
+      </ul>
+  </div>
 </div>
