@@ -1,11 +1,13 @@
 <div class="span12 application">
-    <%= mainTitle "Fornecedores" %>
-  <ul>
-    <% @suppliers.each do |suplier|%>
-      <li>
-      	<%= suplier.name%>
-      	<span><%= image_tag suplier.image.url(:small), :align => "center" %></span>
-      </li>
-    <% end %>
-  </ul>
+  <%= mainTitle "Fornecedores" %>
+  <div class="suppliers inside">
+    <ul>
+      <% @suppliers.each do |suplier|%>
+        <li>
+        	<span><%= image_tag suplier.image.url(:original), :align => "center" %></span>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="clear"></div>
 </div>
