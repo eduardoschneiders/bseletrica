@@ -1,17 +1,21 @@
 <div class="row">
   <div class="span12 application">
+    <div class="services">
+        <%= mainTitle "Obras", "Ver todas as obras", services_path %>
 
-    <%= mainTitle "Obras", "Ver todas as obras", services_path %>
+        <h2><%= @service.title %></h2>
 
-    <h2><%= @service.title %></h2>
-
-    <span style="color: #B2B2B2; text-transform: uppercase; font-size: 10px; text-decoration: none;">Local:</span> <%= @service.location %> <br />
-    <span style="color: #B2B2B2; text-transform: uppercase; font-size: 10px; text-decoration: none;">Data do serviço:</span> <%= distance_of_time_in_words Time.now, @service.updated_at %> <br />
+        <span style="color: #B2B2B2; text-transform: uppercase; font-size: 10px; text-decoration: none;">Local:</span> <%= @service.location %> <br />
+        <span style="color: #B2B2B2; text-transform: uppercase; font-size: 10px; text-decoration: none;">Data do serviço:</span> <%= distance_of_time_in_words Time.now, @service.updated_at %> <br />
 
 
-    <div class="image" style="margin-bottom: 30px;"><div class="back"><%= image_tag @service.image.url(:wide) %></div></div>
-    <% for asset in @service.asset_for_services %>
-        <%= link_to(image_tag(asset.image.url(:thumb)),asset.image.url(:large)) %>
-    <% end %>
+        <div class="image" style="margin-bottom: 30px;"><div class="back"><%= image_tag @service.image.url(:wide) %></div></div>
+
+        <div class="galery">
+            <% for asset in @service.asset_for_services %>
+                <%= link_to(image_tag(asset.image.url(:thumb)),asset.image.url(:large), :data => {:lightbox => "example-set"}) %>
+            <% end %>
+        </div>
+    </div>
   </div>
 </div>
