@@ -6,14 +6,10 @@
   <li> <%= link_to "Obras", services_path %></li>
   <li class="breadcrumb-separator"></li>
   <li> <%= link_to "Clientes", clients_path %></li>
-  <!-- <li class="breadcrumb-separator"></li>
-  <li> <%= link_to "Produtos", "#" %></li> -->
   <li class="breadcrumb-separator"></li>
   <li> <%= link_to "Fornecedores", suppliers_path %></li>
   <li class="breadcrumb-separator"></li>
   <li> <%= link_to "Novidades", news_path %></li>
-  <!-- <li class="breadcrumb-separator"></li>
-  <li> <%= link_to "Cadastre-se", "#" %></li> -->
   <li class="breadcrumb-separator"></li>
-  <li> <%= link_to "Contato", contact_path %></li>
+  <li> <%= link_to "Contato" , :controller => :contacts, :action => :new %></li>
 </ul>

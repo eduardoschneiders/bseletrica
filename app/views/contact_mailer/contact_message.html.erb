@@ -1,0 +1,17 @@
+<h1>Mensagem de contato</h1>
+
+
+<b>Data de envio:</b> <%= Time.now.strftime("%d/%m/%Y %H:%M") %><br />
+
+<b>Visitante:</b> <%= @contact['name'] %><br />
+
+
+<b>Email:</b> <%= @contact['email'] %><br />
+
+<% if @contact['subject'].present? %>
+    <b>Assunto:</b> <%= @contact['subject'] %><br />
+<% end %>
+
+<b>Mensagem:</b><br />
+
+<%= @contact['message'] %>

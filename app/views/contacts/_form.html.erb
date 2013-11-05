@@ -1,0 +1,28 @@
+<%= form_for(@contact) do |f| %>
+
+  <span class="mainLabel">Seus dados</span>
+
+  <div class="field">
+    <%= f.text_field :name, :placeholder => "Nome" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :email, :placeholder => "Email" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :subject, :placeholder => "Assunto" %>
+  </div>
+  <br /><br />
+  <span class="mainLabel">Mensagem</span>
+
+  <div class="field">
+    <%= f.text_area :message%>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit "enviar", :class => "send_btn" %>
+  </div>
+<% end %>
+

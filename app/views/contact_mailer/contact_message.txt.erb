@@ -1,0 +1,17 @@
+Mensagem de contato
+Data de envio: <%= Time.now.strftime("%d/%m/%Y %H:%M") %>
+
+Visitante: <%= @contact['name'] %>
+
+
+Email: <%= @contact['email'] %>
+
+  <% if @contact['subject'].present? %>
+Assunto: <%= @contact['subject'] %>
+
+<% end %>
+Mensagem:
+
+<%= @contact['message'] %>
+
+- See more at: http://blog.glaucocustodio.com/2012/11/06/enviando-emails-via-stmp-do-gmail-com-action-mailer-do-ruby-on-rails-ex-de-formulario-de-contato-e-model-sem-tabela/#sthash.HTe5eQj0.dpuf
