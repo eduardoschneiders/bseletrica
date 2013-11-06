@@ -13,7 +13,6 @@ Bseletrica::Application.routes.draw do
   match 'news', :to => 'news#index', :as => :news
   match 'clients', :to => 'clients#index', :as => :clients
   match 'suppliers', :to => 'suppliers#index', :as => :suppliers
-  match 'contact', :to => 'contact#index', :as => :contact
   match '/news/:id', :to => 'news#show', :as => :notice
   match '/services/:id', :to => 'services#show', :as => :service
 

@@ -16,6 +16,8 @@ class ContactsController < ApplicationController
       redirect_to :action => 'new'
       return
     end
+
+    render :action => 'new'
   end
 
 end

@@ -9,7 +9,7 @@ pt-BR:
     - Sex
     - Sáb
     abbr_month_names:
-    - 
+    -
     - Jan
     - Fev
     - Mar
@@ -35,7 +35,7 @@ pt-BR:
       long: ! '%d de %B de %Y'
       short: ! '%d de %B'
     month_names:
-    - 
+    -
     - Janeiro
     - Fevereiro
     - Março
@@ -198,10 +198,14 @@ pt-BR:
       long: ! '%A, %d de %B de %Y, %H:%M h'
       short: ! '%d/%m, %H:%M h'
     pm: ''
-  # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
-  activemodel:
-    errors:
-      <<: *errors
+
   activerecord:
+    attributes:
+      contacts:
+        name: "Nome"
     errors:
-      <<: *errors
+      models:
+        contact:
+          attributes:
+            name:
+              blank: "cannot be empty"

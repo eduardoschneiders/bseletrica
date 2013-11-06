@@ -1,6 +1,31 @@
 <%= form_for(@contact) do |f| %>
 
-  <span class="mainLabel">Seus dados</span>
+  <% if @contact.errors.any? %>
+    <h2>Foram encontrados <%= pluralize(@contact.errors.count, "erro") %>.</h2>
+      <% @contact.errors.each do |name, msg| %>
+
+          <%
+            case name.to_s
+            when 'name'
+              name = 'Nome'
+            when 'email'
+              name = 'Email'
+            when 'subject'
+              name = 'Assunto'
+            when 'message'
+              name = 'Mensagem'
+            end
+          %>
+
+          <div class="alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <%= name.to_s + " " + msg.to_s %>.
+          </div>
+      <% end %>
+  <% end %>
+
+  <br />
+  <div class="mainLabel">Seus dados</div>
 
   <div class="field">
     <%= f.text_field :name, :placeholder => "Nome" %>
@@ -14,7 +39,7 @@
     <%= f.text_field :subject, :placeholder => "Assunto" %>
   </div>
   <br /><br />
-  <span class="mainLabel">Mensagem</span>
+  <div class="mainLabel">Mensagem</div>
 
   <div class="field">
     <%= f.text_area :message%>
