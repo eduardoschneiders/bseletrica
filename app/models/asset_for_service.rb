@@ -6,7 +6,7 @@ class AssetForService < ActiveRecord::Base
     :styles => {
       :thumb => '150X150#',
       :medium => '300X300>',
-      :large => '600X600'
+      :large => '900X750'
     }
   # attr_accessible :service_id
 end
