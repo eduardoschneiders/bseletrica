@@ -9,11 +9,11 @@
         <span style="color: #B2B2B2; text-transform: uppercase; font-size: 10px; text-decoration: none;">Data do serviço:</span> <%= distance_of_time_in_words Time.now, @service.updated_at %> <br />
 
 
-        <div class="image" style="margin-bottom: 30px;"><div class="back"><%= image_tag @service.image.url(:wide) %></div></div>
+	<div class="image" style="margin-bottom: 30px;"><div class="back"><%= link_to(image_tag(@service.image.url(:wide)), @service.image.url(:wide_full), :data => {:lightbox => "example-sett"}) %></div></div>
 
         <div class="galery">
             <% for asset in @service.asset_for_services %>
-                <%= link_to(image_tag(asset.image.url(:thumb)),asset.image.url(:large), :data => {:lightbox => "example-set"}) %>
+                <%= link_to(image_tag(asset.image.url(:thumb)), asset.image.url(:large), :data => {:lightbox => "example-set"}) %>
             <% end %>
         </div>
     </div>
