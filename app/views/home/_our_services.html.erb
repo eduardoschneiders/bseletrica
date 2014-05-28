@@ -1,5 +1,5 @@
 <div class="our_services mainLines">
-  
+
   <div class="row">
     <div class="span12 application">
 
@@ -7,7 +7,8 @@
         <ul>
           <% @our_services.each do |our_service|%>
             <li>
-              <%= our_service.title %>
+              <%= image_tag(File.join("/", "images", "our_services", "/") + our_service[:image]) %>
+              <span><%= our_service[:title] %></span>
             </li>
           <% end %>
         </ul>
