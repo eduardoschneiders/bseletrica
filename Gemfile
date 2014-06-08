@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '~> 3.2.18'
 
 # Database
 gem 'pg'
@@ -9,19 +9,18 @@ gem 'pg'
 gem 'thin'
 
 # Frontend stuff
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 2.3.0'
 gem 'slim-rails'
+gem 'coffee-rails'
 
 # Administrative
-gem 'activeadmin'
+gem 'activeadmin', '~> 0.5.0'
 
 # Tools
 gem "paperclip", "~> 3.0"
-gem "meta_search", '>= 1.1.0.pre'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+gem 'sass-rails', '~> 3.2.3'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby
