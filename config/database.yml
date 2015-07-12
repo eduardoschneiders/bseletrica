@@ -19,8 +19,9 @@ test:
   timeout: 5000
 
 production:
+  host: localhost
   adapter: postgresql
-  database: production
-  username:  postgres
+  database: bseletrica_production
+  username: bseletrica
   pool: 5
   timeout: 5000
