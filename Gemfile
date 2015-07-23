@@ -18,6 +18,7 @@ gem 'activeadmin', '~> 0.5.0'
 
 # Tools
 gem "paperclip", "~> 3.0"
+gem 'aws-sdk', '< 2.0'
 
 group :assets do
 gem 'sass-rails', '~> 3.2.3'
