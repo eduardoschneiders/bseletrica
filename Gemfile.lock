@@ -68,6 +68,9 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    dotenv (2.0.1)
+    dotenv-rails (2.0.1)
+      dotenv (= 2.0.1)
     erubis (2.7.0)
     eventmachine (1.0.7)
     execjs (2.5.2)
@@ -204,6 +207,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin (~> 0.5.0)
   coffee-rails
+  dotenv-rails
   jquery-rails (~> 2.3.0)
   paperclip (~> 3.0)
   pg

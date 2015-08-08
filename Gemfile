@@ -31,3 +31,7 @@ end
 group :development, :test do
 	gem "rspec-rails", ">= 2.12.0"
 end
+
+group :production do
+  gem 'dotenv-rails'
+end
