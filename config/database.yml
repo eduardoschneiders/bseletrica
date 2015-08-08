@@ -22,7 +22,7 @@ production:
   host: localhost
   adapter: postgresql
   database: bseletrica_production
-  username: <%= ENV['BS_DATABASE_USERNAME'] %> #bseletrica
-  password: <%= ENV['BS_DATABASE_PASSWORD'] %> #bseletrica
+  username: <%= ENV['BS_DATABASE_USERNAME'] %>
+  password: <%= ENV['BS_DATABASE_PASSWORD'] %>
   pool: 5
   timeout: 5000
